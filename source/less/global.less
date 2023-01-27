@@ -1,0 +1,50 @@
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  background-color: @white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 320px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}

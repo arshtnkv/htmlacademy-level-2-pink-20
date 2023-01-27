@@ -1,0 +1,65 @@
+.button-green {
+  padding: 14px 0;
+  margin-bottom: 46px;
+  text-transform: uppercase;
+  background-color: @bg-btn;
+  border: 2px solid @bg-btn;
+  border-radius: 1px;
+  color: @white;
+
+  &:hover,
+  &:focus {
+    background: @bg-btn-hover;
+    border: 2px solid @bg-btn-hover;
+  }
+
+  &:active {
+    background: @bg-btn-hover;
+    border: 2px solid @bg-btn-hover;
+    color: fade(@white, 30%);
+  }
+}
+
+.btn {
+  padding: 12px 0 14px;
+  color: @red;
+  font-family: @font;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  border: 3px solid @red;
+  border-radius: 30px;
+  outline: none;
+
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: @red;
+  }
+
+  &:active {
+    color: fade(white, 30%);
+  }
+}
+
+.btn--gray {
+  color: fade(@blue, 10%);
+  border-color: fade(@blue, 10%);
+
+  &:hover,
+  &:focus {
+    color: fade(@blue, 30%);
+    border-color: fade(@blue, 30%);
+    background-color: transparent;
+  }
+
+  &:active {
+    color: fade(white, 30%);
+    border-color: transparent;
+    background-color: fade(@blue, 30%);
+  }
+}

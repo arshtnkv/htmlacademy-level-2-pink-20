@@ -1,0 +1,84 @@
+.label-file {
+  cursor: pointer;
+}
+
+.input-text {
+  display: block;
+  padding: 0 21px;
+  width: 100%;
+  min-height: 62px;
+  margin-top: 6px;
+  margin-bottom: 17px;
+  font-family: @font;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+  border: 2px solid @silver;
+  resize: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+  }
+
+  &:active {
+    border-color: @red;
+  }
+}
+
+.input-textarea {
+  display: block;
+  width: 278px;
+  height: 198px;
+  padding: 0 19px;
+  padding-top: 10px;
+  margin: 0 auto;
+  font-family: @font;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+  border: 2px solid @silver;
+  resize: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+  }
+
+  &:active {
+    border-color: @red;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 502px;
+    height: 193px;
+    padding: 0 21px;
+    padding-top: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 822px;
+    height: 128px;
+    padding: 13px 21px;
+  }
+}
+
+.label-text {
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: @red;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

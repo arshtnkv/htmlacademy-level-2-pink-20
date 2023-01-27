@@ -1,0 +1,143 @@
+.effect {
+  display: none;
+  font-family: @font;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @grey;
+    margin-bottom: 56px;
+  }
+}
+
+.effect__inner {
+  font-family: @font;
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 31px;
+    padding-bottom: 58px;
+  }
+}
+
+.effect__icon {
+  width: 238px;
+  position: relative;
+  display: block;
+  margin-right: 72px;
+  padding: 150px 0;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 238px;
+    height: 276px;
+    padding-top: 71px;
+    text-align: center;
+    font-family: @font;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 163px;
+    color: @red;
+    background-image:
+      url("../img/icon-editor-diagram-fill.svg"),
+      url("../img/icon-timer.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 75%, 50% 50%;
+    background-size: 200px auto, 238px auto;
+    box-sizing: border-box;
+    content: "24";
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    padding: 177px 0;
+    margin-right: 70px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 350px;
+      font-size: 120px;
+      line-height: 163px;
+      padding-top: 113px;
+      background-size: 254px auto, 300px auto;
+    }
+  }
+}
+
+.effect__content {
+  width: 310px;
+  padding-top: 40px;
+
+  @media (min-width: @desktop-width) {
+    width: 534px;
+    padding-top: 95px;
+  }
+}
+
+.effect__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 11px;
+
+  & span {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+    margin-bottom: 25px;
+
+    & span {
+      display: inline;
+    }
+  }
+}
+
+.effect__text {
+  width: 300px;
+  margin: 0;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 24px;
+  color: @blue;
+  text-align: left;
+  box-sizing: border-box;
+
+  & span {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 534px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+
+    & span {
+      display: inline;
+    }
+  }
+}
+
+.effect__link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: @red;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

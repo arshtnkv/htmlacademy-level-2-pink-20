@@ -1,0 +1,251 @@
+.photogallery {
+  font-family: @font;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.photogallery__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: 300px 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+
+.photogallery__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 4px;
+  }
+}
+
+.photogallery__item:first-child {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    padding: 6px 0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    color: @white;
+    background: @red;
+    text-align: center;
+    text-transform: uppercase;
+    content: "Панорама дня";
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 30px;
+
+    &::before {
+      top: 56px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-bottom: 0;
+  }
+}
+
+.photogallery__item:first-child .photogallery__photo {
+  width: calc(40px + 100%);
+  margin-left: -20px;
+
+  @media (min-width: @desktop-width) {
+    width: calc(260px + 100%);
+    margin-left: -130px;
+  }
+}
+
+.photogallery__photo {
+  width: 280px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.photogallery__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.photogallery__item:first-child img {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    height: 509px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 506px;
+  }
+}
+
+.photogallery__desc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 18px 10px 17px 17px;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 30px 24px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 23px 31px 23px 27px;
+  }
+}
+
+.photogallery__desc-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.photogallery__desc-time {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.photogallery__desc-text {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 48px;
+  }
+}
+
+.photogallery__desc-like {
+  position: relative;
+  margin-top: auto;
+  padding-left: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: @red;
+  text-transform: uppercase;
+
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    content: "";
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.photogallery__desc--ponarama {
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 22px 30px 14px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding: 24px 30px 11px 27px;
+  }
+}
+
+.photogallery__desc-name--ponarama {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.photogallery__desc-text--ponarama {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 0;
+    order: 3;
+  }
+}
+
+.photogallery__desc-like--ponarama {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 30px;
+    order: 2;
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
